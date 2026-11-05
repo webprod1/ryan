@@ -37,7 +37,3 @@ GSAP/ScrollTrigger runs in scoped matchMedia contexts and reverts on route chang
 ## Owner information still required
 
 Official Share & Sell URLs per edition; verified format, ISBN and publication details; any current price; optional public contact email; approved journal entries. Review privacy/terms for the owner’s actual operating practices before public launch. The source portrait and some book artwork have limited resolution; higher resolution originals will improve large-display quality. See `CONTENT-SOURCES.md` and `QA.md`.
-
-## The Living Manuscript redesign
-
-The presentation uses a paper, ink, olive and burgundy editorial system, a numbered masthead, an inset photographic opening, distinct page compositions and scoped GSAP masking. No dependencies, source content, commerce rules, contact behavior or routing were changed. See `DESIGN.md`. To compare copy, links, image placements and SEO with an earlier exported version, run `node scripts/audit-preservation.mjs <absolute-baseline-out-directory>`.

@@ -23,13 +23,3 @@ November 5, 2026. This is an independent project; source-site access consisted o
 - Legal notices describe the implemented site and need owner review before public launch.
 
 Reproduce the export audit with `pnpm build` followed by `node scripts/audit-export.mjs`.
-
-## The Living Manuscript redesign verification
-
-The redesign retained the Next.js/TypeScript framework and existing dependencies. A comparison with the prior production export passes for all main-content copy tokens, image placements, navigation destinations, descriptions, Open Graph text and canonical URLs across all 13 public pages. The original commerce, contact and article data/logic were preserved.
-
-The final optimized build passes compilation and TypeScript validation without CSS warnings. The export audit again passes 13 routes, 215 internal link placements and 15 image placements. Browser checks cover all 13 routes at 320 × 740, 390 × 844, 820 × 1180 and 1440 × 1000 (52 checks), with one H1, a main landmark, no horizontal overflow and no failed loaded images in each check. No browser errors or warnings were captured in the redesign preview.
-
-All five genre filters return their expected results (5, 2, 1, 1 and 1 books). The mobile menu opens, closes with Escape from the toggle and closes on route navigation. Desktop opening, selected works and author feature; mobile opening and book index; and tablet reviews, journal and contact were visually inspected. Navigation targets and unavailable commerce states were preserved rather than replaced with new placeholder behavior.
-
-Motion respects the existing reduced-motion policy, omits parallax on mobile and reverts scoped GSAP contexts on navigation. This was reviewed in source; no OS preference changes, formal Lighthouse measurement or accessibility certification were performed. The earlier owner setup requirements remain applicable.
