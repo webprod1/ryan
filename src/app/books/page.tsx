@@ -1,0 +1,3 @@
+import {BookGallery} from '@/components/Books';
+export const metadata={title:'Books',description:'Five books. Many ways of seeing. Explore Ryan L. Robinson’s fiction, science fiction, memoir and political nonfiction.',alternates:{canonical:'/books/'}};
+export default function Books(){return <><section className="page-intro"><span className="eyebrow">THE COLLECTED WORKS / RYAN L. ROBINSON</span><div className="intro-row"><h1>A bookshelf<br/><i>without borders.</i></h1><p>Real lives. Unfamiliar worlds.<br/>Questions worth following.<br/>Find the story that calls to you.</p></div></section><section className="section gallery-section" aria-label="Book collection"><h2 className="sr-only">Explore the collection</h2><BookGallery/></section></>}

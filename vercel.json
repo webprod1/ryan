@@ -1,0 +1,1 @@
+{"buildCommand":"pnpm build","outputDirectory":"out","framework":"nextjs","cleanUrls":true,"trailingSlash":true}
