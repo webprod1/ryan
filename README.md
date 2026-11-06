@@ -39,3 +39,7 @@ GSAP/ScrollTrigger runs in scoped matchMedia contexts and reverts on route chang
 Official Share & Sell URLs per edition; verified format, ISBN and publication details; any current price; optional public contact email; approved journal entries. Review privacy/terms for the owner’s actual operating practices before public launch. The source portrait and some book artwork have limited resolution; higher resolution originals will improve large-display quality. See `CONTENT-SOURCES.md` and `QA.md`.
 
 The deployed site contains no links, redirects or book-data URLs pointing to the author’s original domain. Book covers and the portrait are served from this project’s own image directory. The export audit rejects the original domain in every public page.
+
+## Cinematic Literary Multiverse
+
+The current presentation retains the verified content and routes while adding a dark cover-led opening, warm editorial reading sections and five genre-specific book worlds. `src/data/worlds.ts` contains visual direction only; it does not change bibliographic or commerce data. See `DESIGN.md` for the inventory, palette, motion rules and maintenance boundaries. DM Mono is loaded from Google Fonts alongside the existing font families. No new JavaScript dependencies were added.
