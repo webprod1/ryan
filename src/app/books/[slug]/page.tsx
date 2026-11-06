@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import {assetPath} from '@/data/paths';
 import Link from 'next/link';
 import {notFound} from 'next/navigation';
 import {books,origin} from '@/data/books';
@@ -13,7 +14,7 @@ export default async function Book({params}:{params:Promise<{slug:string}>}){
    <div className="world-ambient" aria-hidden="true"/>
    <div className="world-breadcrumb"><Link href="/books">THE COLLECTION</Link><span> / {b.title.toUpperCase()}</span></div>
    <div className="world-hero-copy"><span className="eyebrow">WORLD {world.number} / {b.category}</span><h1>{b.title}</h1>{b.subtitle&&<p className="book-subtitle"><i>{b.subtitle}</i></p>}<p className="byline">By Ryan L. Robinson</p><p className="world-description">{b.description}</p><a className="text-link" href="#story">Discover the story <span>↓</span></a></div>
-   <div className="world-cover" data-clip><span className="world-folio" aria-hidden="true">{world.number}</span><Image src={b.cover} alt={b.title+' original book cover'} width={600} height={900} priority sizes="(max-width:700px) 66vw, 30vw"/><span className="world-cover-label">{world.label}</span></div>
+   <div className="world-cover" data-clip><span className="world-folio" aria-hidden="true">{world.number}</span><Image src={assetPath(b.cover)} alt={b.title+' original book cover'} width={600} height={900} priority sizes="(max-width:700px) 66vw, 30vw"/><span className="world-cover-label">{world.label}</span></div>
    <div className="world-bottom"><span className="eyebrow">BEYOND THE WRITTEN WORLD</span><span className="eyebrow">RYAN L. ROBINSON / {world.number}</span></div>
   </section>
   <article id="story" className="book-story"><div><span className="eyebrow">INSIDE THE STORY</span><h2>Read beyond<br/><i>the cover.</i></h2><p className="synopsis">{b.synopsis}</p><dl className="book-facts"><div><dt>Author</dt><dd>Ryan L. Robinson</dd></div><div><dt>Shelf</dt><dd>{b.category}</dd></div><div><dt>Editions & publication details</dt><dd>To be confirmed</dd></div></dl></div><Purchase slug={b.slug}/></article>

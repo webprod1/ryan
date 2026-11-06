@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 const root=path.resolve('out');
+const basePath=(process.env.NEXT_PUBLIC_BASE_PATH||'').replace(/\/$/,'');
+const unprefix=url=>basePath&&(url===basePath||url.startsWith(basePath+'/'))?url.slice(basePath.length)||'/':url;
 const slugs=['white-elephant-gypsies','melvin-entwistle','the-curse-of-tecumseh','sorrows-edge','curing-marxism'];
 const routes=['','about','books','reviews','journal','contact','privacy','terms',...slugs.map(s=>'books/'+s)];
 const failures=[];let links=0,images=0;
@@ -14,13 +16,14 @@ for(const route of routes){
  if(/<meta name="robots" content="[^\"]*noindex/.test(html))failures.push('Unexpected noindex: '+route);
  for(const match of html.matchAll(/<a\b[^>]*href="([^\"]+)"/g)){
   const url=match[1];if(!url.startsWith('/')||url.startsWith('//'))continue;links++;
-  const clean=url.split(/[?#]/)[0];const target=path.join(root,decodeURIComponent(clean));
+  if(basePath&&url!==basePath&&!url.startsWith(basePath+'/'))failures.push('Unprefixed internal URL: '+url);
+  const clean=unprefix(url.split(/[?#]/)[0]);const target=path.join(root,decodeURIComponent(clean));
   if(!fs.existsSync(target)&&!fs.existsSync(path.join(target,'index.html')))failures.push(`Broken link ${route} -> ${url}`);
  }
  for(const match of html.matchAll(/<img\b[^>]*>/g)){
   images++;if(!/\balt="[^\"]+"/.test(match[0]))failures.push('Missing image alt: '+route);
   const src=match[0].match(/\bsrc="([^\"]+)"/)?.[1];
-  if(src?.startsWith('/')&&!fs.existsSync(path.join(root,src)))failures.push('Missing asset: '+src);
+  if(src?.startsWith('/')&&!fs.existsSync(path.join(root,unprefix(src))))failures.push('Missing asset: '+src);
  }
  for(const match of html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)){try{JSON.parse(match[1])}catch{failures.push('Invalid JSON-LD: '+route)}}
  if(route.startsWith('books/')&&!html.includes('Purchase links coming soon'))failures.push('Missing purchase availability: '+route);

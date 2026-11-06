@@ -43,3 +43,7 @@ The deployed site contains no links, redirects or book-data URLs pointing to the
 ## Cinematic Literary Multiverse
 
 The current presentation retains the verified content and routes while adding a dark cover-led opening, warm editorial reading sections and five genre-specific book worlds. `src/data/worlds.ts` contains visual direction only; it does not change bibliographic or commerce data. See `DESIGN.md` for the inventory, palette, motion rules and maintenance boundaries. DM Mono is loaded from Google Fonts alongside the existing font families. No new JavaScript dependencies were added.
+
+## GitHub Pages
+
+The repository deploys automatically from `main` via `.github/workflows/pages.yml` to `https://webprod1.github.io/ryan/`. GitHub Pages uses the `/ryan` base path, including images and client navigation. The workflow sets `NEXT_PUBLIC_BASE_PATH=/ryan` and `NEXT_PUBLIC_SITE_URL=https://webprod1.github.io/ryan`; root-hosted Sites and Vercel builds leave the base path empty. For another GitHub repository, update these two workflow variables. Enable Pages with GitHub Actions as its source in repository settings.

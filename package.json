@@ -2,7 +2,7 @@
   "name": "ryan-robinson-independent",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm",
+  "packageManager": "pnpm@11.25.0",
   "scripts": {
     "dev": "next dev --hostname 127.0.0.1",
     "build": "node scripts/prepare-journal.mjs && next build",
