@@ -33,9 +33,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--bronze);outline-off
 
 /* A cover-led opening, lit like a quiet museum display. */
 .multiverse-hero{position:relative;isolation:isolate;display:grid;grid-template-columns:1.4fr 1fr;gap:0 7%;padding:35px 7% 30px;min-height:820px;min-height:max(820px,calc(100svh - 104px));overflow:hidden;background:var(--navy);color:var(--ivory)}
-.hero-atmosphere{position:absolute;inset:0;z-index:-2;opacity:.085}
-.hero-atmosphere img{object-fit:cover;filter:grayscale(1) brightness(.65)}
-.multiverse-hero:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#101317fa,#101317a8 65%,#101317d9)}
+.hero-atmosphere{position:absolute;inset:0;z-index:-2;opacity:1}
+.hero-atmosphere img{object-fit:cover;object-position:center 56%;filter:saturate(.45) brightness(.85)}
+.multiverse-hero:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#101c2b30,#101c2b18 45%,#101c2bc9),linear-gradient(90deg,#101c2b99,#101c2b28 65%,#101c2b60)}
 .hero-author{font-family:var(--serif);font-size:35px;letter-spacing:-.015em;color:var(--bronze);margin:5px 0 20px}
 .opening-copy{position:relative;z-index:2;align-self:center;padding-bottom:35px}
 .multiverse-hero h1{font-size:clamp(83px,8.6vw,145px);line-height:.8;letter-spacing:-.055em}
