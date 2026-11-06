@@ -11,7 +11,7 @@ Retrieved read-only on November 5, 2026. No source-site code, CSS, scripts, comp
 | Sorrows’ Edge / Grrrrr | https://ryanlrobinson.net/sorrows-edge |
 | Curing Marxism subtitle and author’s thesis | https://ryanlrobinson.net/curing-marxism |
 | Three attributed, shortened review excerpts | https://ryanlrobinson.net/ |
-| Verified contact destination | https://ryanlrobinson.net/contact |
+
 
 The original website serves its book images and author portrait from its `img1.wsimg.com` asset directory `7c1ec75e-8f19-4725-ba13-e519d67aadd6`. The copies in `public/images` use these exact source files:
 

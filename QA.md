@@ -23,3 +23,7 @@ November 5, 2026. This is an independent project; source-site access consisted o
 - Legal notices describe the implemented site and need owner review before public launch.
 
 Reproduce the export audit with `pnpm build` followed by `node scripts/audit-export.mjs`.
+
+## Independent-site link cleanup
+
+Removed the Reviews page’s original-site link and unused original-domain URL fields from book data. All images remain locally bundled. The export audit rejects any reference to the original author domain in public page output. Offline research provenance remains in CONTENT-SOURCES.md only. The Contact page retains its own disabled form until an author email is supplied.

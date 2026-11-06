@@ -8,6 +8,7 @@ for(const route of routes){
  const file=path.join(root,route,'index.html');
  if(!fs.existsSync(file)){failures.push('Missing route '+route);continue}
  const html=fs.readFileSync(file,'utf8');
+ if(/ryanlrobinson\.net/i.test(html))failures.push('Original author domain remains in page: '+route);
  if((html.match(/<h1(?:\s|>)/g)||[]).length!==1)failures.push('Expected one h1: '+route);
  if(!/<link rel="canonical" href="https:\/\//.test(html))failures.push('Missing canonical: '+route);
  if(/<meta name="robots" content="[^\"]*noindex/.test(html))failures.push('Unexpected noindex: '+route);

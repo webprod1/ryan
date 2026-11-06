@@ -24,7 +24,7 @@ Example shape (replace values with verified information before use):
 
 ## Content management
 
-- `src/data/books.ts`: five titles, editorial descriptions, original source pages, local cover images, review excerpts and deployment origin.
+- `src/data/books.ts`: five titles, editorial descriptions, local cover images, review excerpts and deployment origin. Original research references are retained only in the offline CONTENT-SOURCES.md document, not in the deployed site.
 - `src/data/articles.json`: only add owner-approved authentic articles. Each entry has a unique slug, title, ISO date, category, excerpt and paragraph array. The build validates entries and copies `templates/journal-article.tsx` into the App Router only when entries exist. Adding entries generates real article routes and updates the sitemap. Run `pnpm build` after adding content. There are no invented articles.
 - `src/app/about/page.tsx`: source-grounded biography.
 - `public/images/`: authentic source cover images and author portrait; atmospheric landscape is a separate illustrative photograph, not a photo of the author’s home or travels.
@@ -37,3 +37,5 @@ GSAP/ScrollTrigger runs in scoped matchMedia contexts and reverts on route chang
 ## Owner information still required
 
 Official Share & Sell URLs per edition; verified format, ISBN and publication details; any current price; optional public contact email; approved journal entries. Review privacy/terms for the owner’s actual operating practices before public launch. The source portrait and some book artwork have limited resolution; higher resolution originals will improve large-display quality. See `CONTENT-SOURCES.md` and `QA.md`.
+
+The deployed site contains no links, redirects or book-data URLs pointing to the author’s original domain. Book covers and the portrait are served from this project’s own image directory. The export audit rejects the original domain in every public page.
