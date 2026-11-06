@@ -595,3 +595,14 @@ body{font-size:17px}
 @media(max-width:900px){.author-name-hero{height:calc(100svh - 90px);min-height:740px}.author-name-hero .hero-intro{top:55px}.author-name-hero h1{top:24%}}
 @media(max-width:700px){.author-name-hero{height:calc(100svh - 90px);min-height:750px}.author-name-hero h1{font-size:clamp(80px,21vw,145px);top:24%;left:6%;right:4%}.author-name-hero .hero-line.second{margin-left:3%}.author-name-hero .hero-intro{top:40px}.author-name-hero .hero-intro .eyebrow{font-size:11px}.author-name-hero .hero-bottom{bottom:30px}.author-name-hero .hero-bottom p{font-size:30px}.author-name-hero .hero-actions{width:100%;margin:0}.author-name-hero .hero-actions .button{font-size:14px;gap:8px;padding:13px 10px}.author-name-hero .hero-actions .quiet-link{font-size:14px}}
 @media(max-width:360px){.author-name-hero h1{font-size:22vw}.author-name-hero .hero-actions .button,.author-name-hero .hero-actions .quiet-link{font-size:13px}.author-name-hero .hero-bottom p{font-size:27px}}
+
+/* Glass navigation; the mountain image continues behind the home masthead. */
+header,header.home-header,header.home-header.scrolled{position:fixed;top:0;left:0;right:0;background:rgba(16,19,23,.76);backdrop-filter:blur(18px) saturate(120%);-webkit-backdrop-filter:blur(18px) saturate(120%);border-bottom:1px solid rgba(241,236,226,.15);box-shadow:0 4px 22px rgba(0,0,0,.06);transition:background .3s,box-shadow .3s}
+header.home-header{background:rgba(16,19,23,.3)}
+header.scrolled,header.home-header.scrolled{background:rgba(16,19,23,.72);box-shadow:0 5px 22px rgba(0,0,0,.13)}
+main{padding-top:104px}
+[data-page=home] main{padding-top:0}
+.author-name-hero{height:100svh;min-height:820px}
+@media(max-width:900px){main{padding-top:90px}.author-name-hero{height:100svh;min-height:830px}.author-name-hero .hero-intro{top:130px}}
+@media(max-width:700px){.author-name-hero{height:100svh;min-height:840px}.author-name-hero .hero-intro{top:125px}.author-name-hero h1{top:27%}nav.open{background:rgba(16,19,23,.94)}}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){header,header.home-header,header.home-header.scrolled{background:rgba(16,19,23,.84)}}
