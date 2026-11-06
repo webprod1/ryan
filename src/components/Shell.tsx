@@ -14,7 +14,9 @@ export function Motion({children}:{children:React.ReactNode}){
   mm.add('(prefers-reduced-motion: no-preference)',()=>{
    const ctx=gsap.context(()=>{
     const scope=ref.current;
-    if(scope?.querySelector('.multiverse-hero')){
+    if(scope?.querySelector('.author-name-hero')){
+     gsap.timeline({defaults:{ease:'power3.out'}}).fromTo('.hero-line > span',{yPercent:110},{yPercent:0,duration:1.2,stagger:.15},.1).fromTo('.hero-detail',{opacity:0},{opacity:1,duration:.7},.6);
+    }else if(scope?.querySelector('.multiverse-hero')){
      gsap.timeline({defaults:{ease:'power3.out'}})
       .fromTo('.hero-author',{opacity:0,y:10},{opacity:1,y:0,duration:.6},0)
       .fromTo('.hero-line > span',{yPercent:110},{yPercent:0,duration:1.1,stagger:.1},.15)

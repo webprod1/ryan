@@ -5,23 +5,7 @@ import {BookCard} from '@/components/Books';
 import {books,reviews,origin} from '@/data/books';
 export const metadata={alternates:{canonical:'/'}};
 export default function Home(){return <>
- <section className="multiverse-hero">
-  <div className="hero-atmosphere"><Image src={assetPath('/images/landscape.jpg')} fill priority sizes="100vw" alt="A still lake reflecting mountains beneath a wide evening sky"/></div>
-  <div className="opening-meta"><span className="eyebrow">FICTION. HISTORY. THE POSSIBLE.</span><span className="eyebrow">THE COLLECTED WORLDS OF</span></div>
-  <div className="opening-copy">
-   <p className="hero-author">Ryan L. Robinson.</p>
-   <h1 aria-label="Beyond the written world."><span className="hero-line" aria-hidden="true"><span>Beyond the</span></span><span className="hero-line" aria-hidden="true"><span><i>written</i></span></span><span className="hero-line" aria-hidden="true"><span>world.</span></span></h1>
-   <p className="opening-label">The Literary Worlds of Ryan L. Robinson</p>
-   <p className="opening-note">Stories that look closer.<br/>And venture further.</p>
-   <div className="opening-actions"><Link className="button" href="/books">Explore the books <span>↗</span></Link><Link className="text-link" href="/about">Discover the author <span>↗</span></Link></div>
-  </div>
-  <Link className="hero-volume" href="/books/white-elephant-gypsies/" aria-label="Explore White Elephant Gypsies">
-   <span className="volume-meta">WORLD 01 / MEMOIR & MILITARY HISTORY</span>
-   <div className="volume-art" data-float><Image src={assetPath(books[0].cover)} alt="White Elephant Gypsies authentic book cover" width={450} height={680} priority sizes="(max-width:700px) 60vw, 28vw"/></div>
-   <span className="volume-caption"><span>White Elephant Gypsies</span><span>Enter this world ↗</span></span>
-  </Link>
-  <div className="opening-bottom"><a href="#author-introduction" className="scroll-note">SCROLL TO DISCOVER <span>↓</span></a><span className="eyebrow">IMAGINATION WITHOUT BOUNDARIES</span></div>
- </section>
+ <section className="hero author-name-hero"><Image className="hero-landscape" data-parallax src={assetPath('/images/landscape.jpg')} fill priority sizes="100vw" alt="A still lake reflecting mountains beneath a wide evening sky"/><div className="hero-shade"/><div className="hero-intro hero-detail"><span className="eyebrow">FICTION. HISTORY. THE POSSIBLE.</span><span className="hero-edition">THE COLLECTED WORLDS OF</span></div><h1><span className="hero-line"><span>Ryan L.</span></span><span className="hero-line second"><span><i>Robinson.</i></span></span></h1><div className="hero-bottom hero-detail"><div><p>Beyond the<br/><em>written world.</em></p><span>Stories that look closer.<br/>And venture further.</span></div><div className="hero-actions"><Link className="button ivory" href="/books">Explore the books <span>↗</span></Link><Link className="quiet-link" href="/about">Discover the author <span>↗</span></Link></div><a className="scroll-note" href="#author-introduction">SCROLL TO DISCOVER <span>↓</span></a></div><span className="hero-side">IMAGINATION WITHOUT BOUNDARIES</span></section>
  <section id="author-introduction" className="about-feature">
   <div className="portrait-wrap" data-clip><Image src={assetPath('/images/ryan-robinson.jpg')} alt="Ryan L. Robinson, author" width={900} height={1100} sizes="(max-width:700px) 90vw, 38vw"/><span className="image-caption">RYAN L. ROBINSON / THE AUTHOR</span></div>
   <div className="about-copy"><span className="eyebrow">02 / BEHIND THE WORDS</span><h2>A life of precision.<br/><i>A mind of<br/>possibility.</i></h2><p>Electronics. Computer science. A lifetime of asking how things work. For Ryan L. Robinson, curiosity has always been a way of seeing.</p><p>Today, that same instinct finds its home in stories—shaped by a love of history, science and what makes people tick.</p><Link className="text-link" href="/about">Meet the author <span>↗</span></Link></div>

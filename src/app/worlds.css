@@ -582,3 +582,16 @@ body{font-size:17px}
 
 .book-world[data-world=future] .world-cover:before{border-color:#ddc09244}
 
+
+/* Original oversized author signature over the mountain photograph. */
+.author-name-hero{height:calc(100svh - 104px);min-height:720px;max-height:1150px}
+.author-name-hero .hero-landscape{object-fit:cover;object-position:center 56%;filter:saturate(.45) brightness(.85)}
+.author-name-hero .hero-shade{background:linear-gradient(180deg,#101c2b70,#101c2b12 43%,#101c2bd9)}
+.author-name-hero h1{font-size:clamp(112px,14.5vw,240px);letter-spacing:-.055em;line-height:.83}
+.author-name-hero .hero-line.second{margin-left:22%;color:var(--ivory)}
+.author-name-hero .hero-bottom p{color:var(--ivory)}
+.author-name-hero .hero-actions .button{background:var(--ivory);border-color:var(--ivory);color:var(--navy)}
+.author-name-hero .hero-actions .button:hover{background:var(--bronze);border-color:var(--bronze)}
+@media(max-width:900px){.author-name-hero{height:calc(100svh - 90px);min-height:740px}.author-name-hero .hero-intro{top:55px}.author-name-hero h1{top:24%}}
+@media(max-width:700px){.author-name-hero{height:calc(100svh - 90px);min-height:750px}.author-name-hero h1{font-size:clamp(80px,21vw,145px);top:24%;left:6%;right:4%}.author-name-hero .hero-line.second{margin-left:3%}.author-name-hero .hero-intro{top:40px}.author-name-hero .hero-intro .eyebrow{font-size:11px}.author-name-hero .hero-bottom{bottom:30px}.author-name-hero .hero-bottom p{font-size:30px}.author-name-hero .hero-actions{width:100%;margin:0}.author-name-hero .hero-actions .button{font-size:14px;gap:8px;padding:13px 10px}.author-name-hero .hero-actions .quiet-link{font-size:14px}}
+@media(max-width:360px){.author-name-hero h1{font-size:22vw}.author-name-hero .hero-actions .button,.author-name-hero .hero-actions .quiet-link{font-size:13px}.author-name-hero .hero-bottom p{font-size:27px}}
