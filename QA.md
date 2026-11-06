@@ -16,7 +16,7 @@ November 5, 2026. This is an independent project; source-site access consisted o
 ## Boundaries and owner setup
 
 - There are no supplied, verified IngramSpark Share & Sell links, edition details, ISBNs or current prices. No live checkout can be tested. All five purchasing states remain disabled and clearly explained. Only HTTPS configured destinations can become links; the owner must verify the exact title and format before enabling them.
-- No direct author email was supplied. The contact page offers the verified existing public contact form in a clearly labelled external tab. It does not connect to the original backend or submit on the visitor’s behalf. An optional public contact address enables a validated local email composer. Actual email delivery was not tested or claimed.
+- No direct author email was supplied. The contact page displays its own disabled form with an availability notice until the author provides an email address. It has no link or submission to the original website. An optional public contact address enables a validated local email composer. Actual email delivery was not tested or claimed.
 - No formal Lighthouse/Core Web Vitals measurement, automated accessibility certification, assistive-technology session, or real-device performance benchmark was performed. Accessibility and animation review combines source inspection with browser interaction and responsive screenshots.
 - Reduced-motion handling and cleanup were reviewed in source; OS-level motion preference was not changed during QA.
 - The original low-resolution portrait and photographed Sorrows’ Edge cover are authentic. Higher-resolution owner originals are recommended.

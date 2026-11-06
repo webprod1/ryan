@@ -28,7 +28,7 @@ Example shape (replace values with verified information before use):
 - `src/data/articles.json`: only add owner-approved authentic articles. Each entry has a unique slug, title, ISO date, category, excerpt and paragraph array. The build validates entries and copies `templates/journal-article.tsx` into the App Router only when entries exist. Adding entries generates real article routes and updates the sitemap. Run `pnpm build` after adding content. There are no invented articles.
 - `src/app/about/page.tsx`: source-grounded biography.
 - `public/images/`: authentic source cover images and author portrait; atmospheric landscape is a separate illustrative photograph, not a photo of the author’s home or travels.
-- `.env.local`: optional `NEXT_PUBLIC_CONTACT_EMAIL` enables a validated mail composer. Without it, the Contact page clearly links to the verified original contact form. No submission is silently discarded. Email composition requires the visitor’s email application; it is not an integrated mail-delivery service.
+- `.env.local`: optional `NEXT_PUBLIC_CONTACT_EMAIL` enables a validated mail composer. Without it, the Contact page shows its own disabled form and an availability notice; it never redirects to the original website. Add the approved email address and rebuild to activate the composer. No submission is silently discarded. Email composition requires the visitor’s email application; it is not an integrated mail-delivery service.
 
 ## Motion and accessibility
 
