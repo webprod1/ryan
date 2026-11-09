@@ -661,3 +661,16 @@ img.front-cover-crop{aspect-ratio:582 / 888;object-fit:cover!important;object-po
 .poster-grid figure:hover .text-link span{transform:translate(4px,-4px)}
 }
 @media(prefers-reduced-motion:reduce){.poster-art,.poster-art::after,.poster-grid figure figcaption h3,.poster-grid figure .text-link span{transition:none}.poster-grid figure:hover .poster-art,.poster-grid figure:hover .text-link span{transform:none}.poster-art::after{display:none}}
+
+/* Video cards echo the poster effects while keeping player controls unobstructed. */
+.video-player{box-shadow:0 12px 30px #0003;transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s,border-color .5s}
+.video-caption h3{transition:color .35s}
+.video-caption .text-link span{display:inline-block;transition:transform .35s}
+.video-card:focus-within .video-player{border-color:var(--bronze);box-shadow:0 18px 42px #0007,0 0 28px #d4ba8a24}
+.video-card:focus-within .video-caption h3{color:var(--bronze)}
+@media(hover:hover) and (pointer:fine){
+.video-card:hover .video-player{transform:translateY(-7px);border-color:var(--bronze);box-shadow:0 22px 46px #0008,0 0 30px #d4ba8a28}
+.video-card:hover .video-caption h3{color:var(--bronze)}
+.video-card:hover .text-link span{transform:translate(4px,-4px)}
+}
+@media(prefers-reduced-motion:reduce){.video-player,.video-caption h3,.video-caption .text-link span{transition:none}.video-card:hover .video-player,.video-card:hover .text-link span{transform:none}}
