@@ -646,3 +646,18 @@ img.front-cover-crop{aspect-ratio:582 / 888;object-fit:cover!important;object-po
 .poster-single{grid-template-columns:minmax(0,700px)}
 @media(max-width:900px){.poster-grid,.press-grid{grid-template-columns:1fr;gap:44px}.poster-melvin-entwistle .poster-qr-cover{font-size:18px}}
 .press-grid figcaption small{color:#49453e}.press-grid .text-link{border-color:#6c6252}
+
+/* Subtle depth and a passing highlight for all three promotional posters. */
+.poster-art{isolation:isolate;outline:1px solid #d4ba8a20;box-shadow:0 12px 30px #0003;transition:transform .55s cubic-bezier(.2,.7,.2,1),box-shadow .55s,outline-color .55s}
+.poster-art::after{content:'';position:absolute;inset:-35% -80%;z-index:3;pointer-events:none;background:linear-gradient(110deg,transparent 42%,#fff0 45%,#fff2 49%,#fff4 50%,#fff0 55%,transparent 58%);transform:translateX(-65%);opacity:0;transition:transform .85s ease,opacity .45s}
+.poster-grid figure figcaption h3{transition:color .35s}
+.poster-grid figure .text-link span{display:inline-block;transition:transform .35s}
+.poster-grid figure:focus-within .poster-art{outline-color:#d4ba8ab3;box-shadow:0 20px 45px #0007,0 0 26px #d4ba8a20}
+.poster-grid figure:focus-within figcaption h3{color:var(--bronze)}
+@media(hover:hover) and (pointer:fine){
+.poster-grid figure:hover .poster-art{transform:perspective(1100px) translateY(-9px) rotateX(1.5deg);outline-color:#d4ba8ab3;box-shadow:0 24px 48px #0009,0 0 32px #d4ba8a24}
+.poster-grid figure:hover .poster-art::after{transform:translateX(65%);opacity:1}
+.poster-grid figure:hover figcaption h3{color:var(--bronze)}
+.poster-grid figure:hover .text-link span{transform:translate(4px,-4px)}
+}
+@media(prefers-reduced-motion:reduce){.poster-art,.poster-art::after,.poster-grid figure figcaption h3,.poster-grid figure .text-link span{transition:none}.poster-grid figure:hover .poster-art,.poster-grid figure:hover .text-link span{transform:none}.poster-art::after{display:none}}
