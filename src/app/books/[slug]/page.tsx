@@ -1,3 +1,4 @@
+import {Videos} from '@/components/Videos';
 import Image from 'next/image';
 import {assetPath} from '@/data/paths';
 import Link from 'next/link';
@@ -18,6 +19,7 @@ export default async function Book({params}:{params:Promise<{slug:string}>}){
    <div className="world-bottom"><span className="eyebrow">BEYOND THE WRITTEN WORLD</span><span className="eyebrow">RYAN L. ROBINSON / {world.number}</span></div>
   </section>
   <article id="story" className="book-story"><div><span className="eyebrow">INSIDE THE STORY</span><h2>Read beyond<br/><i>the cover.</i></h2><p className="synopsis">{b.synopsis}</p><dl className="book-facts"><div><dt>Author</dt><dd>Ryan L. Robinson</dd></div><div><dt>Shelf</dt><dd>{b.category}</dd></div><div><dt>Editions & publication details</dt><dd>To be confirmed</dd></div></dl></div><Purchase slug={b.slug}/></article>
+  <Videos selection={slug}/>
   <section className="section related"><span className="eyebrow">KEEP EXPLORING</span><h2 style={{marginTop:20}}>Another world <i>awaits.</i></h2><div className="related-links">{books.filter(x=>x.slug!==slug).map(r=><Link key={r.slug} href={'/books/'+r.slug}><span><small>WORLD {literaryWorlds[r.slug].number}</small>{r.title}</span><span>↗</span></Link>)}</div></section>
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({'@context':'https://schema.org','@type':'Book',name:b.title,author:{'@type':'Person',name:'Ryan L. Robinson'},description:b.description,image:origin+b.cover,url:origin+'/books/'+b.slug+'/',genre:b.category,inLanguage:'en'})}}/>
  </div>

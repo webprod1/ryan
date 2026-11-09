@@ -29,3 +29,6 @@ Descriptions are concise new summaries, not copied full synopses. Review wording
 ## Owner-provided cover update — November 9, 2026
 
 The owner supplied the updated Sorrows’ Edge wrap artwork as a JPEG. `public/images/sorrows-edge-v4-wrap.jpg` preserves that supplied file unchanged. The website displays only its front panel (rightmost 582 pixels of the 1218 × 888 image) through the `front-cover-crop` presentation rule. This updates the home showcase, book collection and individual book page from the shared book record. The story, title, author and other metadata remain unchanged.
+## Owner-supplied videos
+The owner supplied two book trailers (White Elephant Gypsies: g-_M-6UHU90; The Curse of Tecumseh: U4ioXk9L9fI) and an author interview (Unsung Heroes of Vietnam: znGajKxXGW0). Titles and channel (URLink Print & Media) verified with YouTube oEmbed. The first link's 13-second offset is preserved. Responsive, lazy-loaded privacy-enhanced YouTube embeds have no autoplay and include direct YouTube fallback links. All three appear on the homepage; trailers also appear on their book pages and the interview on About.
+

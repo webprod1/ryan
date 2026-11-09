@@ -1,3 +1,4 @@
+import {Videos} from '@/components/Videos';
 import Image from 'next/image';
 import {assetPath} from '@/data/paths';
 import Link from 'next/link';
@@ -18,6 +19,7 @@ export default function Home(){return <>
  </section>
  <section className="worlds section"><div><span className="eyebrow">03 / A WORLD OF STORIES</span><h2>Where will<br/>a story <i>take you?</i></h2></div><div className="world-list">{[['01','Into the remembered','Memoir & military history','white-elephant-gypsies'],['02','Beyond the familiar','Science fiction','melvin-entwistle'],['03','Across time & possibility','Short stories','the-curse-of-tecumseh'],['04','Inside the argument','Political nonfiction','curing-marxism']].map(([n,title,cat,slug])=><Link key={n} href={'/books/'+slug}><span>{n}</span><div><h3>{title}</h3><p className="eyebrow">{cat}</p></div><span>↗</span></Link>)}</div></section>
  <section className="author-lens section"><span className="eyebrow">ONE AUTHOR. MANY WORLDS.</span><h2>History. Science.<br/><i>Human nature.</i></h2><p>A love of history, science and what makes people tick. The starting point for a lifetime of stories.</p></section>
+ <Videos/>
  <section className="reader-section section"><div className="section-heading"><span className="eyebrow">04 / READERS’ VOICES</span><h2>Words that<br/><i>stay with you.</i></h2><Link className="text-link" href="/reviews">See all reviews <span>↗</span></Link></div><div className="review-previews">{reviews.map(r=><figure key={r.name}><span className="quote-mark">“</span><blockquote>{r.quote}</blockquote><figcaption><span>{r.name}</span><small>{r.credit}</small></figcaption></figure>)}</div></section>
  <section className="home-journal section"><div><span className="eyebrow">JOURNAL / NEWS</span><h2>Between<br/><i>the lines.</i></h2></div><div><p>No journal entries have been published here yet. Future author updates and book announcements will appear in this space.</p><Link className="text-link" href="/journal">Visit the journal <span>↗</span></Link></div></section>
  <section className="closing"><span className="eyebrow">TURN THE PAGE</span><h2>The familiar ends.<br/><i>The story begins.</i></h2><Link className="button" href="/books">Enter the collection <span>↗</span></Link></section>
