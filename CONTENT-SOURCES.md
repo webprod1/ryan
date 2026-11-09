@@ -32,3 +32,6 @@ The owner supplied the updated Sorrows’ Edge wrap artwork as a JPEG. `public/i
 ## Owner-supplied videos
 The owner supplied two book trailers (White Elephant Gypsies: g-_M-6UHU90; The Curse of Tecumseh: U4ioXk9L9fI) and an author interview (Unsung Heroes of Vietnam: znGajKxXGW0). Titles and channel (URLink Print & Media) verified with YouTube oEmbed. The first link's 13-second offset is preserved. Responsive, lazy-loaded privacy-enhanced YouTube embeds have no autoplay and include direct YouTube fallback links. All three appear on the homepage; trailers also appear on their book pages and the interview on About.
 
+
+## Owner-supplied reviews and posters
+Added the two supplied US Review of Books PDFs unchanged, with reviewer credits verified from rendered first pages: Mari Carlson (The Curse of Tecumseh and Other Stories), Kat Kennedy (Sorrow's Edge). Brief excerpts link to each complete PDF; no ratings or endorsements were invented. Three supplied promotional JPGs appear on the homepage and corresponding book pages. The White Elephant Gypsies poster's lower URL/QR panel is excluded from display; Melvin Entwistle's QR panel is covered with an internal book link. Original source images remain unchanged, while displayed posters keep navigation independent of the old author website.
