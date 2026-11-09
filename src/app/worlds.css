@@ -606,3 +606,7 @@ main{padding-top:104px}
 @media(max-width:900px){main{padding-top:90px}.author-name-hero{height:100svh;min-height:830px}.author-name-hero .hero-intro{top:130px}}
 @media(max-width:700px){.author-name-hero{height:100svh;min-height:840px}.author-name-hero .hero-intro{top:125px}.author-name-hero h1{top:27%}nav.open{background:rgba(16,19,23,.94)}}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){header,header.home-header,header.home-header.scrolled{background:rgba(16,19,23,.84)}}
+
+/* Exact front-panel presentation of the supplied wrap: x636–1218 of 1218×888.
+   Original artwork pixels are preserved; the back and spine stay outside the image box. */
+img.front-cover-crop{aspect-ratio:582 / 888;object-fit:cover!important;object-position:right center!important}

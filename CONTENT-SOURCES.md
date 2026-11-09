@@ -25,3 +25,7 @@ The original website serves its book images and author portrait from its `img1.w
 Illustrative landscape: https://images.unsplash.com/photo-1470770841072-f978cf4d019e — locally downloaded and used as atmospheric landscape photography. It is not represented as the author’s own photography or a biographical location.
 
 Descriptions are concise new summaries, not copied full synopses. Review wording is preserved only in brief attributed excerpts with ellipses. No awards, publication dates, prices, ratings, ISBNs, formats, credentials, direct purchase URLs or sales claims have been fabricated. Three source testimonials are displayed; the site does not suggest an exhaustive archive of reviews.
+
+## Owner-provided cover update — November 9, 2026
+
+The owner supplied the updated Sorrows’ Edge wrap artwork as a JPEG. `public/images/sorrows-edge-v4-wrap.jpg` preserves that supplied file unchanged. The website displays only its front panel (rightmost 582 pixels of the 1218 × 888 image) through the `front-cover-crop` presentation rule. This updates the home showcase, book collection and individual book page from the shared book record. The story, title, author and other metadata remain unchanged.
