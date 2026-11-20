@@ -3,8 +3,8 @@ import Link from 'next/link';
 import {assetPath} from '@/data/paths';
 
 const press=[
- {slug:'the-curse-of-tecumseh',title:'The Curse of Tecumseh',reviewer:'Mari Carlson',quote:'Wordplay delights, while the surprise endings sustain interest.'},
- {slug:'sorrows-edge',title:'Sorrows’ Edge',reviewer:'Kat Kennedy',quote:'Robinson has a knack for storytelling and world-building.'},
+ {slug:'the-curse-of-tecumseh',title:'The Curse of Tecumseh',reviewer:'Mari Carlson',url:'https://www.theusreview.com/reviews-1/The-Curse-of-Tecumseh-and-Other-Stories-by-Ryan-Robinson.html',quote:'Wordplay delights, while the surprise endings sustain interest.'},
+ {slug:'sorrows-edge',title:'Sorrows’ Edge',reviewer:'Kat Kennedy',url:'https://www.theusreview.com/reviews-1/Sorrows-Edge-by-Ryan-L-Robinson.html',quote:'Robinson has a knack for storytelling and world-building.'},
 ];
 const posters=[
  {slug:'melvin-entwistle',title:'The Adventures of Melvin Entwistle',image:'melvin-entwistle-poster.jpg',width:526,height:526},
@@ -14,7 +14,7 @@ const posters=[
 
 export function PressReviews({slug}:{slug?:string}){
  const items=press.filter(item=>!slug||item.slug===slug);if(!items.length)return null;
- return <section className="section press-section" aria-labelledby="press-heading"><span className="eyebrow">THE US REVIEW OF BOOKS</span><h2 id="press-heading">A closer look.<br/><i>Independent reviews.</i></h2><div className="press-grid">{items.map(item=><figure key={item.slug}><span className="eyebrow">BOOK REVIEW / {item.title}</span><blockquote>“{item.quote}”</blockquote><figcaption>{item.reviewer}<small>The US Review of Books</small></figcaption><a className="text-link" href={assetPath('/reviews/'+item.slug+'-us-review.pdf')} target="_blank" rel="noopener noreferrer">Read the full review (PDF) <span>↗</span></a></figure>)}</div></section>;
+ return <section className="section press-section" aria-labelledby="press-heading"><span className="eyebrow">THE US REVIEW OF BOOKS</span><h2 id="press-heading">A closer look.<br/><i>Independent reviews.</i></h2><div className="press-grid">{items.map(item=><figure key={item.slug}><span className="eyebrow">BOOK REVIEW / {item.title}</span><blockquote>“{item.quote}”</blockquote><figcaption>{item.reviewer}<small>The US Review of Books</small></figcaption><a className="text-link" href={item.url} target="_blank" rel="noopener noreferrer">Read on The US Review of Books <span>↗</span></a></figure>)}</div></section>;
 }
 
 export function BookPosters({slug}:{slug?:string}){
